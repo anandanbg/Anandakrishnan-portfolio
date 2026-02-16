@@ -88,11 +88,6 @@ text-shadow: 0 0 20px rgba(255,255,255,0.1);
         <!-- Background Fabric -->
         <div class="absolute inset-0 network-grid pointer-events-none z-0 opacity-50"></div>
 
-        <div class="relative z-10 inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#005073]/30 bg-[#005073]/10 text-[#005073] mb-8">
-            <span class="iconify text-sm" data-icon="emojione-v1:flag-india"></span>
-            <span class="text-xs font-mono font-medium tracking-wide text-[#38bdf8]"> | DOB: 22-07-1997</span>
-        </div>
-
         <h1 class="relative z-10 font-semibold tracking-tight mb-6 leading-[1.1] max-w-4xl mx-auto text-glow">
             <span class="block text-4xl sm:text-5xl lg:text-7xl text-[#10B981]">Ananda Krishnan</span>
             <span class="block text-2xl sm:text-3xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400">Networks & Infrastructure Enginner</span>
@@ -114,11 +109,11 @@ text-shadow: 0 0 20px rgba(255,255,255,0.1);
                     <span class="iconify text-xs" data-icon="lucide:chevron-down"></span>
                 </button>
                 <div class="absolute right-0 mt-2 w-48 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
-                    <a href="./CV/Ananda_Krishnan_CV.pdf" download="Ananda_Krishnan_CV.pdf" class="flex items-center gap-2 px-4 py-2 text-slate-300 hover:text-white hover:bg-white/10 transition-colors text-sm">
+                    <a href="./CV/Ananda_Krishnan_CV.pdf" download="Ananda_Krishnan_CV.pdf" target="_blank" class="flex items-center gap-2 px-4 py-2 text-slate-300 hover:text-white hover:bg-white/10 transition-colors text-sm">
                         <span class="iconify text-sm" data-icon="lucide:file-text"></span>
                         Normal CV
                     </a>
-                    <a href="./CV/Ananda_Krishnan_Europass.pdf" download="Ananda_Krishnan_Europass.pdf" class="flex items-center gap-2 px-4 py-2 text-slate-300 hover:text-white hover:bg-white/10 transition-colors text-sm">
+                    <a href="./CV/Ananda_Krishnan_Europass.pdf" download="Ananda_Krishnan_Europass.pdf" target="_blank" class="flex items-center gap-2 px-4 py-2 text-slate-300 hover:text-white hover:bg-white/10 transition-colors text-sm">
                         <span class="iconify text-sm" data-icon="lucide:file-text"></span>
                         Europass CV
                     </a>
@@ -128,7 +123,7 @@ text-shadow: 0 0 20px rgba(255,255,255,0.1);
     </section>
 
     <!-- Stats Section -->
-    <section class="border-y border-white/5 bg-white/[0.01]">
+    <section id="experience" class="scroll-mt-24 border-y border-white/5 bg-white/[0.01]">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
             <!-- Stat 1 -->
             <div class="py-8 md:px-8 flex flex-col items-center text-center group">
@@ -186,23 +181,29 @@ text-shadow: 0 0 20px rgba(255,255,255,0.1);
                         <span class="font-mono text-[10px] text-slate-500 border border-white/10 px-2 py-1 rounded">INFRA_V1.2</span>
                     </div>
                     
-                    <h3 class="text-lg font-medium text-white mb-2">Network Infrastructure</h3>
+                    <h3 class="text-lg font-medium text-white mb-2">Network & Infrastructure</h3>
                     <p class="text-sm text-slate-400 mb-6 leading-relaxed">
-                        Enterprise infrastructure design and deployment. Expertise in managing VMware vSphere, Windows/Linux servers, and implementing robust monitoring solutions.
+                        Enterprise network and infrastructure management across on-premise and cloud environments, ensuring secure connectivity, high availability, and performance.
                     </p>
 
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="flex items-center gap-2 text-xs text-slate-300 font-mono">
-                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> VMware vSphere
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-center gap-2 text-xs text-slate-400 font-mono">
+                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> FortiGate Firewall
                         </div>
-                        <div class="flex items-center gap-2 text-xs text-slate-300 font-mono">
-                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> Windows Server
+                        <div class="flex items-center gap-2 text-xs text-slate-400 font-mono">
+                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> Juniper SSG
                         </div>
-                        <div class="flex items-center gap-2 text-xs text-slate-300 font-mono">
-                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> Linux Administration
+                        <div class="flex items-center gap-2 text-xs text-slate-400 font-mono">
+                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> F5 BIG-IP (LTM)
                         </div>
-                        <div class="flex items-center gap-2 text-xs text-slate-300 font-mono">
-                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> Azure Cloud
+                        <div class="flex items-center gap-2 text-xs text-slate-400 font-mono">
+                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> Cisco Networking
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-slate-400 font-mono">
+                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> VPN & Network Security
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-slate-400 font-mono">
+                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> PRTG Monitoring
                         </div>
                     </div>
                 </div>
@@ -214,18 +215,31 @@ text-shadow: 0 0 20px rgba(255,255,255,0.1);
                             <span class="iconify w-5 h-5" data-icon="lucide:lock"></span>
                         </div>
                     </div>
-                    <h3 class="text-lg font-medium text-white mb-2">Platforms & Tools</h3>
+                    <h3 class="text-lg font-medium text-white mb-2">Systems & Platforms</h3>
+                    <p class="text-xs text-slate-500 mb-4">Server administration, virtualization, and cloud infrastructure support.</p>
                     <ul class="space-y-3 mt-4">
                         <li class="flex items-center justify-between text-xs text-slate-400 border-b border-white/5 pb-2">
-                            <span>Google Cloud / AWS</span>
-                            <span class="text-white font-mono">PRO</span>
+                            <span>Windows Server Admin</span>
+                            <span class="text-white font-mono">EXP</span>
                         </li>
                         <li class="flex items-center justify-between text-xs text-slate-400 border-b border-white/5 pb-2">
-                            <span>Microsoft SQL</span>
-                            <span class="text-white font-mono">ADV</span>
+                            <span>Linux Server Admin</span>
+                            <span class="text-white font-mono">EXP</span>
+                        </li>
+                        <li class="flex items-center justify-between text-xs text-slate-400 border-b border-white/5 pb-2">
+                            <span>VMware vSphere</span>
+                            <span class="text-white font-mono">EXP</span>
+                        </li>
+                        <li class="flex items-center justify-between text-xs text-slate-400 border-b border-white/5 pb-2">
+                            <span>Azure Cloud</span>
+                            <span class="text-white font-mono">EXP</span>
+                        </li>
+                        <li class="flex items-center justify-between text-xs text-slate-400 border-b border-white/5 pb-2">
+                            <span>Active Directory</span>
+                            <span class="text-white font-mono">PRO</span>
                         </li>
                         <li class="flex items-center justify-between text-xs text-slate-400 pb-2">
-                            <span>CCTV Systems</span>
+                            <span>Backup (DPM)</span>
                             <span class="text-white font-mono">EXP</span>
                         </li>
                     </ul>
@@ -240,36 +254,34 @@ text-shadow: 0 0 20px rgba(255,255,255,0.1);
                     </div>
                     <h3 class="text-lg font-medium text-white mb-2">Tools & Operations</h3>
                     <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Firewall</span>
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text[10px] font-mono text-slate-300">Windows Server</span>
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Microsoft SQL</span>
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Active Directory</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Azure DevOps</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Jenkins</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Qualys</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Microsoft 365</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Google Workspace</span>
                         <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Network Security</span>
                     </div>
                 </div>
 
                 <!-- Card D: Cloud & Automation -->
-                <div class="glass-card rounded-xl p-6 lg:col-span-4 flex flex-col md:flex-row items-center gap-6 group hover:bg-white/[0.03] transition-colors">
+                <div class="glass-card rounded-xl p-6 lg:col-span-4 flex flex-col md:flex-row items-start md:items-center gap-6 group hover:bg-white/[0.03] transition-colors">
                     <div class="w-12 h-12 shrink-0 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-400 border border-orange-500/20">
                         <span class="iconify w-6 h-6" data-icon="lucide:cloud-cog"></span>
                     </div>
                     <div class="flex-1">
-                        <h3 class="text-lg font-medium text-white mb-1">DevOps & Automation</h3>
-                        <p class="text-sm text-slate-400">Infrastructure automation and deployment pipeline management.</p>
+                        <h3 class="text-lg font-medium text-white mb-1">DevOps & Infrastructure Support</h3>
+                        <p class="text-sm text-slate-400">Supporting application deployments, CI/CD pipeline operations, and infrastructure tasks using Azure DevOps, Jenkins, and Ansible, with exposure to automation scripting and Azure cloud services.</p>
                     </div>
-                    <div class="flex gap-4 border-t md:border-t-0 md:border-l border-white/10 pt-4 md:pt-0 md:pl-6 w-full md:w-auto justify-between md:justify-start">
-                        <div class="text-center md:text-left">
-                            <div class="text-[10px] font-mono text-slate-500 uppercase">CI/CD</div>
-                            <div class="text-sm text-white font-medium">Jenkins/DevOps</div>
-                        </div>
-                        <div class="text-center md:text-left">
-                            <div class="text-[10px] font-mono text-slate-500 uppercase">Automation</div>
-                            <div class="text-sm text-white font-medium">Ansible</div>
-                        </div>
-                        <div class="text-center md:text-left">
-                            <div class="text-[10px] font-mono text-slate-500 uppercase">Cloud</div>
-                            <div class="text-sm text-white font-medium">Azure/AWS</div>
-                        </div>
+                    <div class="flex flex-wrap gap-2 md:pl-6 border-t md:border-t-0 md:border-l border-white/10 pt-4 md:pt-0">
+                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">CI/CD</span>
+                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">Jenkins</span>
+                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">Azure DevOps</span>
+                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">Automation</span>
+                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">Ansible</span>
+                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">PowerShell</span>
+                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">Bash</span>
+                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">Cloud</span>
+                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">Azure</span>
                     </div>
                 </div>
 
@@ -294,26 +306,26 @@ text-shadow: 0 0 20px rgba(255,255,255,0.1);
 
                         <h3 class="text-3xl font-semibold text-white tracking-tight mb-4">Pearl Data Direct Pvt Ltd</h3>
                         <p class="text-slate-400 leading-relaxed mb-8">
-                            Network Engineer (NOC) managing enterprise network infrastructure and operations. Handling network monitoring, troubleshooting, and maintenance of critical infrastructure. Working with FortiGate, Juniper, and F5 security systems for secure traffic management and continuous infrastructure optimization.
+                            Network & System Engineer managing enterprise network and infrastructure operations. Responsible for network monitoring, troubleshooting, firewall management, and maintaining secure connectivity across on-premise and cloud environments. Working with FortiGate, Juniper SSG, F5 BIG-IP, Cisco networks, Windows/Linux servers, VMware vSphere, and supporting Azure-based infrastructure and deployment tools.
                         </p>
 
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-4">
-                                <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center text-slate-400 border border-white/10">
-                                    <span class="iconify" data-icon="lucide:cpu"></span>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-start gap-3 p-4 rounded-lg bg-white/5 border border-white/10">
+                                <div class="w-6 h-6 rounded bg-[#38bdf8]/10 flex items-center justify-center text-[#38bdf8] shrink-0 mt-0.5">
+                                    <span class="iconify text-sm" data-icon="lucide:shield-alert"></span>
                                 </div>
                                 <div>
-                                    <div class="text-white text-sm font-medium">Security Consolidation</div>
-                                    <div class="text-xs text-slate-500 font-mono">FortiGate / Juniper SSG / F5 Big-IP</div>
+                                    <div class="text-white text-sm font-medium mb-2">Security & Network Operations</div>
+                                    <div class="text-xs text-slate-400 font-mono">FortiGate / Juniper SSG / F5 BIG-IP / Cisco / VPN / PRTG</div>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-4">
-                                <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center text-slate-400 border border-white/10">
-                                    <span class="iconify" data-icon="lucide:shield"></span>
+                            <div class="flex items-start gap-3 p-4 rounded-lg bg-white/5 border border-white/10">
+                                <div class="w-6 h-6 rounded bg-[#10B981]/10 flex items-center justify-center text-[#10B981] shrink-0 mt-0.5">
+                                    <span class="iconify text-sm" data-icon="lucide:server"></span>
                                 </div>
                                 <div>
-                                    <div class="text-white text-sm font-medium">IT Administration & DevOps</div>
-                                    <div class="text-xs text-slate-500 font-mono">Active Directory / Azure DevOps / Jenkins</div>
+                                    <div class="text-white text-sm font-medium mb-2">Systems & Infrastructure Support</div>
+                                    <div class="text-xs text-slate-400 font-mono">Windows Server / Linux / Active Directory / VMware vSphere / Azure / Jenkins / Azure DevOps</div>
                                 </div>
                             </div>
                         </div>
@@ -333,25 +345,22 @@ text-shadow: 0 0 20px rgba(255,255,255,0.1);
                             <div class="space-y-1">
                                 <div class="flex">
                                     <span class="text-[#10B981] mr-2">➜</span>
-                                    <span>verify network infrastructure</span>
+                                    <span>infrastructure status --all</span>
                                 </div>
-                                <div class="text-slate-500 pl-4">Scanning systems...</div>
-                                <div class="pl-4">
-                                    <span class="text-slate-300">Firewall_Gateway</span> <span class="text-[#10B981]">[ACTIVE]</span>
+                                <div class="text-slate-500 pl-4 mt-2">Checking infrastructure components...</div>
+                                <div class="pl-4 mt-2 space-y-1">
+                                    <div><span class="text-slate-300">Firewall_Gateway</span> <span class="text-[#10B981]">[ACTIVE]</span></div>
+                                    <div><span class="text-slate-300">F5_WAF_Protection</span> <span class="text-[#10B981]">[ENABLED]</span></div>
+                                    <div><span class="text-slate-300">F5_Security_Logs</span> <span class="text-[#10B981]">[MONITORING]</span></div>
+                                    <div><span class="text-slate-300">VPN_Tunnels</span> <span class="text-[#10B981]">[CONNECTED]</span></div>
                                 </div>
-                                <div class="pl-4">
-                                    <span class="text-slate-300">VM_Cluster_01</span> <span class="text-[#10B981]">[HEALTHY]</span>
-                                </div>
-                                <div class="pl-4">
-                                    <span class="text-slate-300">DNS_Servers</span> <span class="text-[#10B981]">[SYNCED]</span>
-                                </div>
-                                <div class="flex mt-2">
+                                <div class="flex mt-3">
                                     <span class="text-[#10B981] mr-2">➜</span>
-                                    <span>show active directory status</span>
+                                    <span>system check</span>
                                 </div>
-                                <div class="text-slate-500 pl-4">
-                                    Domain Controller&nbsp;&nbsp;&nbsp;&nbsp;Status&nbsp;&nbsp;&nbsp;&nbsp;Replication<br>
-                                    DC-Primary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online&nbsp;&nbsp;&nbsp;&nbsp;Healthy
+                                <div class="pl-4 mt-2 space-y-1">
+                                    <div><span class="text-slate-300">VM_Cluster</span> <span class="text-[#10B981]">[HEALTHY]</span></div>
+                                    <div><span class="text-slate-300">AD_Servers</span> <span class="text-[#10B981]">[SYNCED]</span></div>
                                 </div>
                             </div>
                         </div>
