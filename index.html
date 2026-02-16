@@ -107,10 +107,23 @@ text-shadow: 0 0 20px rgba(255,255,255,0.1);
                 Connect on LinkedIn
                 <span class="iconify group-hover:translate-x-0.5 transition-transform" data-icon="lucide:arrow-right"></span>
             </a>
-            <a href="mailto:anandakrishnan1942@gmail.com" class="group flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-white/10 text-slate-300 text-sm font-medium bg-white/5 hover:bg-white/10 hover:border-white/20 transition-all">
-                <span class="iconify" data-icon="lucide:mail"></span>
-                Get in Touch
-            </a>
+            <div class="relative group">
+                <button class="flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-white/10 text-slate-300 text-sm font-medium bg-white/5 hover:bg-white/10 hover:border-white/20 transition-all">
+                    <span class="iconify" data-icon="lucide:download"></span>
+                    Download CV
+                    <span class="iconify text-xs" data-icon="lucide:chevron-down"></span>
+                </button>
+                <div class="absolute right-0 mt-2 w-48 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
+                    <a href="./CV/Ananda_Krishnan_CV.pdf" download="Ananda_Krishnan_CV.pdf" class="flex items-center gap-2 px-4 py-2 text-slate-300 hover:text-white hover:bg-white/10 transition-colors text-sm">
+                        <span class="iconify text-sm" data-icon="lucide:file-text"></span>
+                        Normal CV
+                    </a>
+                    <a href="./CV/Ananda_Krishnan_Europass.pdf" download="Ananda_Krishnan_Europass.pdf" class="flex items-center gap-2 px-4 py-2 text-slate-300 hover:text-white hover:bg-white/10 transition-colors text-sm">
+                        <span class="iconify text-sm" data-icon="lucide:file-text"></span>
+                        Europass CV
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -122,7 +135,7 @@ text-shadow: 0 0 20px rgba(255,255,255,0.1);
                 <div class="mb-3 text-[#10B981]">
                     <span class="iconify w-6 h-6" data-icon="lucide:activity"></span>
                 </div>
-                <h3 class="text-2xl font-semibold text-white tracking-tight mb-1 group-hover:text-[#10B981] transition-colors">Pearl Data Direct</h3>
+                <a href="https://www.pearldatadirect.com/" target="_blank" class="text-2xl font-semibold text-white tracking-tight mb-1 group-hover:text-[#10B981] transition-colors hover:cursor-pointer inline-block">Pearl Data Direct</a>
                 <p class="text-xs font-mono text-slate-500 uppercase tracking-wider">Network Engineer (NOC) - Present</p>
             </div>
             <!-- Stat 2 -->
@@ -130,7 +143,7 @@ text-shadow: 0 0 20px rgba(255,255,255,0.1);
                 <div class="mb-3 text-[#005073]">
                     <span class="iconify w-6 h-6 text-[#38bdf8]" data-icon="lucide:server"></span>
                 </div>
-                <h3 class="text-2xl font-semibold text-white tracking-tight mb-1 group-hover:text-[#38bdf8] transition-colors">Autobahn Trucking </h3>
+                <a href="https://autobahntrucking.com/" target="_blank" class="text-2xl font-semibold text-white tracking-tight mb-1 group-hover:text-[#38bdf8] transition-colors hover:cursor-pointer inline-block">Autobahn Trucking </a>
                 <p class="text-xs font-mono text-slate-500 uppercase tracking-wider">Senior Network Engineer (01/2022 - 06/2024)</p>
             </div>
             <!-- Stat 3 -->
