@@ -1,403 +1,603 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ananda Krishnan | Network & Infrastructure Engineer</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-/* Custom overrides for that specific data-center feel */
-:root {
---cisco-blue: #005073;
---sec-green: #10B981;
---bg-dark: #0A0A0A;
-}
-body {
-background-color: var(--bg-dark);
-font-family: 'Inter', sans-serif;
-}
-.font-mono {
-font-family: 'JetBrains Mono', monospace;
-}
-/* Subtle Grid Background */
-.network-grid {
-background-image:
-linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-background-size: 40px 40px;
-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
--webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
-}
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-width: 8px;
-}
-::-webkit-scrollbar-track {
-background: #0A0A0A;
-}
-::-webkit-scrollbar-thumb {
-background: #262626;
-border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-background: #404040;
-}
-/* Utilities */
-.glass-card {
-background: rgba(255, 255, 255, 0.02);
-backdrop-filter: blur(12px);
-border: 1px solid rgba(255, 255, 255, 0.08);
-box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
-}
-.text-glow {
-text-shadow: 0 0 20px rgba(255,255,255,0.1);
-}
-</style></head>
-<body class="text-slate-300 antialiased selection:bg-[#005073] selection:text-white relative overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ananda Krishnan | Network & System Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #050708;
+      --panel: rgba(15, 23, 42, 0.82);
+      --panel-strong: rgba(15, 23, 42, 0.96);
+      --border: rgba(148, 163, 184, 0.12);
+      --muted: #94a3b8;
+      --accent: #14b8a6;
+      --accent-strong: #22c55e;
+      --text: #e2e8f0;
+      --text-soft: #cbd5e1;
+      --shadow: 0 30px 120px rgba(15, 23, 42, 0.35);
+    }
 
-    <!-- Ambient Glows -->
-    <div class="fixed top-0 left-0 w-[500px] h-[500px] bg-[#005073] rounded-full mix-blend-screen filter blur-[120px] opacity-10 -z-10 translate-x-[-50%] translate-y-[-50%]"></div>
-    <div class="fixed bottom-0 right-0 w-[600px] h-[600px] bg-[#0A0A0A] rounded-full mix-blend-overlay filter blur-[100px] opacity-20 -z-10"></div>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-[#0A0A0A]/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded bg-gradient-to-br from-white/10 to-transparent border border-white/10 flex items-center justify-center font-mono text-xs font-bold text-white tracking-tighter">
-                    AK
-                </div>
-                <span class="font-mono text-xs text-slate-500 uppercase tracking-widest">Sys_Status: Online</span>
-            </div>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
-                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
-                <a href="#stack" class="hover:text-white transition-colors">Stack</a>
-                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
-            </div>
-            <a href="#contact" class="px-4 py-1.5 rounded-full border border-white/10 text-xs font-medium text-white bg-white/5 hover:bg-white/10 transition-all flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
-                Available for Hire
-            </a>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, rgba(20, 184, 166, 0.12), transparent 25%),
+        linear-gradient(180deg, #020617 0%, #070b12 45%, #04060b 100%);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .glass {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .glow {
+      text-shadow: 0 0 24px rgba(20, 184, 166, 0.18);
+    }
+
+    .soft-border {
+      border: 1px solid rgba(148, 163, 184, 0.14);
+    }
+
+    .section-title {
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .scroll-indicator {
+      position: fixed;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      z-index: 50;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .scroll-indicator.hidden {
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+    }
+
+    .progress-bar {
+      position: relative;
+      background: rgba(148, 163, 184, 0.12);
+      border-radius: 999px;
+      overflow: hidden;
+      height: 0.75rem;
+    }
+
+    .progress-bar > div {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(20, 184, 166, 0.92), rgba(59, 130, 246, 0.95));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 1.4s ease;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.65rem;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .counter {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 1.375rem;
+      top: 1rem;
+      bottom: 0;
+      width: 2px;
+      background: rgba(148, 163, 184, 0.16);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 0.35rem;
+      top: 1rem;
+      width: 0.85rem;
+      height: 0.85rem;
+      border-radius: 999px;
+      background: #0f172a;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 0 6px rgba(20, 184, 166, 0.08);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      background: rgba(15, 23, 42, 0.88);
+      color: var(--text);
+      border: 1px solid rgba(148, 163, 184, 0.1);
+    }
+
+    .pulse-ring {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 8px rgba(20, 184, 166, 0.08);
+      animation: pulse 2.2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.25); opacity: 0.55; }
+    }
+
+    @media (max-width: 768px) {
+      .timeline-line { left: 0.95rem; }
+      .timeline-item { padding-left: 2.5rem; }
+    }
+  </style>
+</head>
+<body class="relative">
+  <div class="min-h-screen">
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-[#050708]/80 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 text-sm text-slate-300">
+        <div class="flex items-center gap-3 font-semibold tracking-[0.18em] text-slate-100 uppercase">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900/80 text-xs">AK</span>
+          Network & System Engineer
         </div>
-    </nav>
+        <nav class="hidden items-center gap-8 md:flex">
+          <a href="#about" class="text-slate-300 hover:text-white">About</a>
+          <a href="#experience" class="text-slate-300 hover:text-white">Experience</a>
+          <a href="#skills" class="text-slate-300 hover:text-white">Skills</a>
+          <a href="#projects" class="text-slate-300 hover:text-white">Projects</a>
+          <a href="#contact" class="text-slate-300 hover:text-white">Contact</a>
+        </nav>
+        <a href="#contact" class="inline-flex items-center gap-2 rounded-full border border-slate-600 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white transition hover:border-teal-400 hover:bg-teal-500/10">Contact</a>
+      </div>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 max-w-7xl mx-auto flex flex-col items-center text-center">
-        <!-- Background Fabric -->
-        <div class="absolute inset-0 network-grid pointer-events-none z-0 opacity-50"></div>
-
-        <h1 class="relative z-10 font-semibold tracking-tight mb-6 leading-[1.1] max-w-4xl mx-auto text-glow">
-            <span class="block text-4xl sm:text-5xl lg:text-7xl text-[#10B981]">Ananda Krishnan</span>
-            <span class="block text-2xl sm:text-3xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400">Cloud & Infrastructure Professional</span>
-        </h1>
-
-        <p class="relative z-10 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-            Cloud & Infrastructure professional with 2+ years of relevant experience in AWS and Azure environments, specializing in Kubernetes, Docker, CI/CD, infrastructure automation, and cloud networking. Backed by overall 5 years of experience in IT infrastructure, networking, and system administration. Skilled in deploying and managing scalable cloud-native applications using Kubernetes, Jenkins, Azure DevOps, and Infrastructure as Code tools. Strong expertise in Linux/Windows, monitoring, networking, and production support focused on automation, reliability, and operational excellence.
-        </p>
-
-        <div class="relative z-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <a href="https://www.linkedin.com/in/ananda-krishnan-70aa13146" class="group flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-lg text-sm font-medium hover:bg-slate-200 transition-colors" target="_blank">
-                Connect on LinkedIn
-                <span class="iconify group-hover:translate-x-0.5 transition-transform" data-icon="lucide:arrow-right"></span>
-            </a>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section id="experience" class="scroll-mt-24 border-y border-white/5 bg-white/[0.01]">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
-            <!-- Stat 1 -->
-            <div class="py-8 md:px-8 flex flex-col items-center text-center group">
-                <div class="mb-3 text-[#10B981]">
-                    <span class="iconify w-6 h-6" data-icon="lucide:activity"></span>
-                </div>
-                <a href="https://www.pearldatadirect.com/" target="_blank" class="text-2xl font-semibold text-white tracking-tight mb-1 group-hover:text-[#10B981] transition-colors hover:cursor-pointer inline-block">Pearl Data Direct</a>
-                <p class="text-xs font-mono text-slate-500 uppercase tracking-wider">Network Engineer (NOC) - Present</p>
+    <main class="relative overflow-hidden">
+      <div class="absolute left-1/2 top-20 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-teal-500/10 blur-3xl"></div>
+      <div class="relative mx-auto max-w-7xl px-6 py-20 lg:py-28">
+        <section class="grid gap-14 lg:grid-cols-[minmax(0,1.2fr)_0.8fr] lg:items-center">
+          <div class="space-y-8">
+            <div class="inline-flex items-center gap-3 rounded-full bg-slate-900/70 px-4 py-2 text-xs uppercase tracking-[0.25em] text-slate-300 shadow-lg shadow-teal-500/10">
+              <span class="pulse-ring"></span>
+              Network & System Engineer | Cloud & Infrastructure Engineer | DevOps Enthusiast
             </div>
-            <!-- Stat 2 -->
-            <div class="py-8 md:px-8 flex flex-col items-center text-center group">
-                <div class="mb-3 text-[#005073]">
-                    <span class="iconify w-6 h-6 text-[#38bdf8]" data-icon="lucide:server"></span>
-                </div>
-                <a href="https://autobahntrucking.com/" target="_blank" class="text-2xl font-semibold text-white tracking-tight mb-1 group-hover:text-[#38bdf8] transition-colors hover:cursor-pointer inline-block">Autobahn Trucking </a>
-                <p class="text-xs font-mono text-slate-500 uppercase tracking-wider">Senior Network Engineer (01/2022 - 06/2024)</p>
+            <div class="space-y-6">
+              <h1 class="max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl glow">Ananda Krishnan</h1>
+              <p class="max-w-3xl text-xl leading-9 text-slate-300 sm:text-2xl">Network & System Engineer with 5+ years of experience in network operations, infrastructure management, server administration, and enterprise security. Currently expanding into Cloud and DevOps with hands-on experience in AWS, Azure, Kubernetes, Docker, Azure DevOps, and automation.</p>
             </div>
-            <!-- Stat 3 -->
-            <div class="py-8 md:px-8 flex flex-col items-center text-center group">
-                <div class="mb-3 text-purple-500">
-                    <span class="iconify w-6 h-6" data-icon="lucide:award"></span>
-                </div>
-                <h3 class="text-2xl font-semibold text-white tracking-tight mb-1 group-hover:text-purple-400 transition-colors">MLSTE IT INTEGRATOR</h3>
-                <p class="text-xs font-mono text-slate-500 uppercase tracking-wider">Service Engineer (05/2019 - 11/2020)</p>
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+              <a href="https://www.linkedin.com/in/ananda-krishnan-70aa13146" target="_blank" class="inline-flex items-center justify-center gap-2 rounded-full bg-teal-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-teal-500/20 transition hover:bg-teal-400">LinkedIn Profile <span class="iconify" data-icon="lucide:arrow-right"></span></a>
+              <a href="mailto:anandanbg1997@gmail.com" class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-900/80 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-teal-400 hover:text-white">Email Me <span class="iconify" data-icon="lucide:mail"></span></a>
             </div>
-        </div>
-    </section>
+          </div>
 
-    <!-- Main Content Grid -->
-    <main class="max-w-7xl mx-auto px-6 py-24 space-y-24">
-        
-        <!-- Tech Stack Bento Grid -->
-        <div id="stack" class="scroll-mt-24">
-            <div class="flex items-end justify-between mb-8">
+          <div class="space-y-6 rounded-[32px] border border-white/10 bg-slate-900/80 p-8 shadow-[0_40px_120px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+            <div class="space-y-4">
+              <p class="text-sm uppercase tracking-[0.24em] text-slate-500">Profile Snapshot</p>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div class="rounded-3xl border border-white/10 bg-slate-950/70 p-5">
+                  <p class="text-sm text-slate-400">Location</p>
+                  <p class="mt-3 font-semibold text-white">Kochi, Kerala, India</p>
+                </div>
+                <div class="rounded-3xl border border-white/10 bg-slate-950/70 p-5">
+                  <p class="text-sm text-slate-400">Email</p>
+                  <p class="mt-3 font-semibold text-white">anandanbg1997@gmail.com</p>
+                </div>
+                <div class="rounded-3xl border border-white/10 bg-slate-950/70 p-5">
+                  <p class="text-sm text-slate-400">Phone</p>
+                  <p class="mt-3 font-semibold text-white">+91 8086518294</p>
+                </div>
+                <div class="rounded-3xl border border-white/10 bg-slate-950/70 p-5">
+                  <p class="text-sm text-slate-400">Experience</p>
+                  <p class="mt-3 font-semibold text-white">5+ Years</p>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-[28px] border border-teal-400/10 bg-[radial-gradient(circle_at_top_left,_rgba(20,184,166,0.15),_transparent_45%)] p-6">
+              <div class="flex items-center justify-between gap-4">
                 <div>
-                    <h2 class="text-xl font-semibold text-white tracking-tight mb-2">Technical Arsenal</h2>
-                    <p class="text-sm text-slate-500">Core competencies and infrastructure stack.</p>
+                  <p class="text-xs uppercase tracking-[0.24em] text-teal-300/80">Certification</p>
+                  <h3 class="mt-3 text-2xl font-semibold text-white">AZ-104 Certified</h3>
                 </div>
-                <div class="hidden sm:flex gap-2 text-xs font-mono text-slate-600">
-                    <span>// SYSTEM_CHECK: PASS</span>
-                    <span>// LATENCY: 2ms</span>
-                </div>
+                <div class="rounded-3xl bg-slate-950/90 px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-teal-100">Microsoft Certified</div>
+              </div>
+              <div class="mt-6 flex flex-wrap gap-3 text-xs text-slate-300">
+                <span class="badge">Azure Administrator Associate</span>
+                <span class="badge">2026 – 2027</span>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                
-                <!-- Card A: Infrastructure (Large) -->
-                <div class="glass-card rounded-xl p-6 lg:col-span-2 group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/5 to-transparent rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                    
-                    <div class="flex items-start justify-between mb-6">
-                        <div class="w-10 h-10 rounded-lg bg-[#005073]/20 flex items-center justify-center text-[#38bdf8] border border-[#005073]/30">
-                            <span class="iconify w-5 h-5" data-icon="lucide:network"></span>
-                        </div>
-                        <span class="font-mono text-[10px] text-slate-500 border border-white/10 px-2 py-1 rounded">INFRA_V1.2</span>
-                    </div>
-                    
-                    <h3 class="text-lg font-medium text-white mb-2">Network, Cloud & Infrastructure</h3>
-                    <p class="text-sm text-slate-400 mb-6 leading-relaxed">
-                        Enterprise network and cloud infrastructure management across on-premise and public cloud (AWS, Azure). Experience with Kubernetes (EKS/AKS), Docker, Terraform, Ansible, load balancing, and secure connectivity to ensure reliability and scalability.
-                    </p>
+        <section class="mt-20 grid gap-5 md:grid-cols-3">
+          <div class="glass rounded-3xl p-8">
+            <p class="section-title">Years of Practice</p>
+            <h2 class="counter mt-4 text-white">5+</h2>
+            <p class="mt-3 text-slate-400">Network operations, infrastructure management and system administration experience.</p>
+          </div>
+          <div class="glass rounded-3xl p-8">
+            <p class="section-title">Technologies</p>
+            <h2 class="counter mt-4 text-white">20+</h2>
+            <p class="mt-3 text-slate-400">Cloud, networking, containers, monitoring and infrastructure tools.</p>
+          </div>
+          <div class="glass rounded-3xl p-8">
+            <p class="section-title">Organizations</p>
+            <h2 class="counter mt-4 text-white">3</h2>
+            <p class="mt-3 text-slate-400">Experience across enterprise and infrastructure operations roles.</p>
+          </div>
+        </section>
+      </div>
 
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="flex items-center gap-2 text-xs text-slate-400 font-mono">
-                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> FortiGate Firewall
-                        </div>
-                        <div class="flex items-center gap-2 text-xs text-slate-400 font-mono">
-                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> Juniper SSG
-                        </div>
-                        <div class="flex items-center gap-2 text-xs text-slate-400 font-mono">
-                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> F5 BIG-IP (LTM)
-                        </div>
-                        <div class="flex items-center gap-2 text-xs text-slate-400 font-mono">
-                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> Cisco Networking
-                        </div>
-                        <div class="flex items-center gap-2 text-xs text-slate-400 font-mono">
-                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> VPN & Network Security
-                        </div>
-                        <div class="flex items-center gap-2 text-xs text-slate-400 font-mono">
-                            <span class="iconify text-[#10B981]" data-icon="lucide:check"></span> PRTG Monitoring
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card B: Security -->
-                <div class="glass-card rounded-xl p-6 lg:col-span-1 group hover:border-[#10B981]/30 transition-colors">
-                    <div class="flex items-start justify-between mb-6">
-                        <div class="w-10 h-10 rounded-lg bg-[#10B981]/10 flex items-center justify-center text-[#10B981] border border-[#10B981]/20">
-                            <span class="iconify w-5 h-5" data-icon="lucide:lock"></span>
-                        </div>
-                    </div>
-                    <h3 class="text-lg font-medium text-white mb-2">Systems & Platforms</h3>
-                    <p class="text-xs text-slate-500 mb-4">Server administration, virtualization, and cloud infrastructure support.</p>
-                    <ul class="space-y-3 mt-4">
-                        <li class="flex items-center justify-between text-xs text-slate-400 border-b border-white/5 pb-2">
-                            <span>Windows Server Admin</span>
-                            <span class="text-white font-mono">EXP</span>
-                        </li>
-                        <li class="flex items-center justify-between text-xs text-slate-400 border-b border-white/5 pb-2">
-                            <span>Linux Server Admin</span>
-                            <span class="text-white font-mono">EXP</span>
-                        </li>
-                        <li class="flex items-center justify-between text-xs text-slate-400 border-b border-white/5 pb-2">
-                            <span>VMware vSphere</span>
-                            <span class="text-white font-mono">EXP</span>
-                        </li>
-                        <li class="flex items-center justify-between text-xs text-slate-400 border-b border-white/5 pb-2">
-                            <span>Azure Cloud</span>
-                            <span class="text-white font-mono">EXP</span>
-                        </li>
-                        <li class="flex items-center justify-between text-xs text-slate-400 border-b border-white/5 pb-2">
-                            <span>Active Directory</span>
-                            <span class="text-white font-mono">PRO</span>
-                        </li>
-                        <li class="flex items-center justify-between text-xs text-slate-400 pb-2">
-                            <span>Backup (DPM)</span>
-                            <span class="text-white font-mono">EXP</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Card C: Protocols -->
-                <div class="glass-card rounded-xl p-6 lg:col-span-1 group">
-                    <div class="flex items-start justify-between mb-6">
-                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 border border-purple-500/20">
-                            <span class="iconify w-5 h-5" data-icon="lucide:route"></span>
-                        </div>
-                    </div>
-                    <h3 class="text-lg font-medium text-white mb-2">Tools & Operations</h3>
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Azure DevOps</span>
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Jenkins</span>
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Docker</span>
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Kubernetes</span>
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Terraform</span>
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Ansible</span>
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Prometheus</span>
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Grafana</span>
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">CloudWatch</span>
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Google Workspace</span>
-                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">Network Security</span>
-                    </div>
-                </div>
-
-                <!-- Card D: Cloud & Automation -->
-                <div class="glass-card rounded-xl p-6 lg:col-span-4 flex flex-col md:flex-row items-start md:items-center gap-6 group hover:bg-white/[0.03] transition-colors">
-                    <div class="w-12 h-12 shrink-0 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-400 border border-orange-500/20">
-                        <span class="iconify w-6 h-6" data-icon="lucide:cloud-cog"></span>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-lg font-medium text-white mb-1">DevOps & Infrastructure Support</h3>
-                        <p class="text-sm text-slate-400">Supporting application deployments, CI/CD pipeline operations, and infrastructure tasks using Azure DevOps, Jenkins, and Ansible, with exposure to automation scripting and Azure cloud services.</p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 md:pl-6 border-t md:border-t-0 md:border-l border-white/10 pt-4 md:pt-0">
-                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">CI/CD</span>
-                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">Jenkins</span>
-                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">Azure DevOps</span>
-                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">Automation</span>
-                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">Ansible</span>
-                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">PowerShell</span>
-                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">Bash</span>
-                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">Cloud</span>
-                        <span class="px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[10px] font-mono text-orange-300">Azure</span>
-                    </div>
-                </div>
-
+      <section id="about" class="mx-auto max-w-7xl px-6 pb-20 pt-16">
+        <div class="grid gap-10 lg:grid-cols-[0.7fr_0.9fr] lg:items-start">
+          <div class="space-y-4">
+            <p class="section-title">Professional Summary</p>
+            <h2 class="text-4xl font-semibold text-white">Real experience, real infrastructure operations.</h2>
+            <p class="text-slate-300 leading-8">Network & System Engineer with 5+ years of experience in network operations, infrastructure management, server administration, and enterprise security. Currently expanding into Cloud and DevOps with hands-on experience in AWS, Azure, Kubernetes, Docker, Azure DevOps, and automation. Experienced with FortiGate, F5, Juniper, VMware, Linux, Windows Server, Active Directory, monitoring, and cloud infrastructure operations.</p>
+          </div>
+          <div class="glass rounded-[32px] border border-white/10 p-8">
+            <p class="section-title">Quick Facts</p>
+            <div class="mt-8 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-3xl bg-slate-950/80 p-5">
+                <p class="text-sm text-slate-400">Cloud Platforms</p>
+                <p class="mt-3 font-semibold text-white">AWS, Azure</p>
+              </div>
+              <div class="rounded-3xl bg-slate-950/80 p-5">
+                <p class="text-sm text-slate-400">Containers</p>
+                <p class="mt-3 font-semibold text-white">Docker, Kubernetes</p>
+              </div>
+              <div class="rounded-3xl bg-slate-950/80 p-5">
+                <p class="text-sm text-slate-400">Automation</p>
+                <p class="mt-3 font-semibold text-white">Azure DevOps, Ansible</p>
+              </div>
+              <div class="rounded-3xl bg-slate-950/80 p-5">
+                <p class="text-sm text-slate-400">Security</p>
+                <p class="mt-3 font-semibold text-white">FortiGate, F5</p>
+              </div>
             </div>
+          </div>
         </div>
+      </section>
 
-        <!-- Project Spotlight -->
-        <div id="projects" class="scroll-mt-24">
-            <h2 class="text-xl font-semibold text-white tracking-tight mb-8">Current Experience</h2>
-            
-            <div class="glass-card rounded-xl p-0 overflow-hidden border border-[#10B981]/20">
-                <div class="grid grid-cols-1 lg:grid-cols-2">
-                    <!-- Project Info -->
-                    <div class="p-8 lg:p-12 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/10 relative">
-                        <!-- Abstract Background visual -->
-                        <div class="absolute inset-0 bg-gradient-to-tr from-[#10B981]/5 to-transparent pointer-events-none"></div>
-
-                <div class="flex items-center gap-3 mb-6">
-                            <span class="w-2 h-2 rounded-full bg-[#10B981] shadow-[0_0_10px_#10B981]"></span>
-                            <span class="text-xs font-mono text-[#10B981] uppercase tracking-widest">Current Role</span>
-                        </div>
-
-                        <h3 class="text-3xl font-semibold text-white tracking-tight mb-4">Pearldata Direct Pvt Ltd</h3>
-                        <p class="text-slate-400 leading-relaxed mb-8">
-                            System / Network Engineer (Jul 2024 – Present). Managed AWS and Azure cloud infrastructure, deployed containerized applications using Docker and Kubernetes (EKS), and built CI/CD pipelines with Azure DevOps and Jenkins. Automated provisioning with Terraform and Ansible, monitored systems with CloudWatch, Prometheus, and Grafana, and supported enterprise networking and security (FortiGate, F5). Supported Linux and Windows server environments and collaborated with development teams to streamline deployments.
-                        </p>
-
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="flex items-start gap-3 p-4 rounded-lg bg-white/5 border border-white/10">
-                                <div class="w-6 h-6 rounded bg-[#38bdf8]/10 flex items-center justify-center text-[#38bdf8] shrink-0 mt-0.5">
-                                    <span class="iconify text-sm" data-icon="lucide:shield-alert"></span>
-                                </div>
-                                <div>
-                                    <div class="text-white text-sm font-medium mb-2">Security & Network Operations</div>
-                                    <div class="text-xs text-slate-400 font-mono">FortiGate / Juniper SSG / F5 BIG-IP / Cisco / VPN / PRTG</div>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3 p-4 rounded-lg bg-white/5 border border-white/10">
-                                <div class="w-6 h-6 rounded bg-[#10B981]/10 flex items-center justify-center text-[#10B981] shrink-0 mt-0.5">
-                                    <span class="iconify text-sm" data-icon="lucide:server"></span>
-                                </div>
-                                <div>
-                                    <div class="text-white text-sm font-medium mb-2">Systems & Infrastructure Support</div>
-                                    <div class="text-xs text-slate-400 font-mono">Windows Server / Linux / Active Directory / VMware vSphere / Azure / Jenkins / Azure DevOps</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Technical Detail Visual -->
-                    <div class="bg-black/40 p-8 lg:p-12 flex flex-col justify-center">
-                        <div class="rounded-lg border border-white/10 bg-[#0A0A0A] p-4 font-mono text-xs text-slate-400 shadow-2xl">
-                            <div class="flex items-center justify-between border-b border-white/10 pb-2 mb-3">
-                                <span class="text-slate-500">terminal@dnac-controller:~</span>
-                                <div class="flex gap-1.5">
-                                    <div class="w-2.5 h-2.5 rounded-full bg-red-500/20"></div>
-                                    <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/20"></div>
-                                    <div class="w-2.5 h-2.5 rounded-full bg-green-500/20"></div>
-                                </div>
-                            </div>
-                            <div class="space-y-1">
-                                <div class="flex">
-                                    <span class="text-[#10B981] mr-2">➜</span>
-                                    <span>infrastructure status --all</span>
-                                </div>
-                                <div class="text-slate-500 pl-4 mt-2">Checking infrastructure components...</div>
-                                <div class="pl-4 mt-2 space-y-1">
-                                    <div><span class="text-slate-300">Firewall_Gateway</span> <span class="text-[#10B981]">[ACTIVE]</span></div>
-                                    <div><span class="text-slate-300">F5_WAF_Protection</span> <span class="text-[#10B981]">[ENABLED]</span></div>
-                                    <div><span class="text-slate-300">F5_Security_Logs</span> <span class="text-[#10B981]">[MONITORING]</span></div>
-                                    <div><span class="text-slate-300">VPN_Tunnels</span> <span class="text-[#10B981]">[CONNECTED]</span></div>
-                                </div>
-                                <div class="flex mt-3">
-                                    <span class="text-[#10B981] mr-2">➜</span>
-                                    <span>system check</span>
-                                </div>
-                                <div class="pl-4 mt-2 space-y-1">
-                                    <div><span class="text-slate-300">VM_Cluster</span> <span class="text-[#10B981]">[HEALTHY]</span></div>
-                                    <div><span class="text-slate-300">AD_Servers</span> <span class="text-[#10B981]">[SYNCED]</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <section id="experience" class="mx-auto max-w-7xl px-6 pb-20">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="section-title">Experience</p>
+            <h2 class="text-4xl font-semibold text-white">Career timeline</h2>
+          </div>
+          <div class="rounded-full border border-slate-700 bg-slate-900/80 px-5 py-3 text-sm text-slate-300">Selected roles and responsibilities</div>
         </div>
+        <div class="relative mt-12 rounded-[32px] border border-white/10 bg-slate-950/80 p-8 shadow-2xl shadow-black/30">
+          <div class="timeline-line"></div>
+          <div class="space-y-12">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-6">
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p class="text-sm uppercase tracking-[0.24em] text-teal-300/80">Current Role</p>
+                    <h3 class="mt-2 text-2xl font-semibold text-white">Pearldata Direct Pvt Ltd</h3>
+                    <p class="mt-1 text-sm text-slate-400">System / Network Engineer • Jul 2024 – Present</p>
+                  </div>
+                  <div class="rounded-3xl bg-teal-500/10 px-4 py-2 text-sm font-semibold text-teal-100">Cloud Operations</div>
+                </div>
+                <ul class="mt-5 grid gap-3 text-slate-300 sm:grid-cols-2">
+                  <li class="rounded-2xl bg-slate-950/90 p-4">AWS Infrastructure</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Azure Infrastructure</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Docker</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Kubernetes (EKS / AKS)</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Azure DevOps</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">CI/CD</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Linux Administration</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Windows Server</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Monitoring</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">FortiGate Firewall</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">F5 Load Balancer</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Git</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Infrastructure Support</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-6">
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p class="text-sm uppercase tracking-[0.24em] text-teal-300/80">Previous Role</p>
+                    <h3 class="mt-2 text-2xl font-semibold text-white">Autobahn Trucking Corporation Pvt Ltd</h3>
+                    <p class="mt-1 text-sm text-slate-400">Senior Network Engineer • Jan 2023 – Jul 2024</p>
+                  </div>
+                  <div class="rounded-3xl bg-slate-800/90 px-4 py-2 text-sm font-semibold text-slate-100">Network Operations</div>
+                </div>
+                <ul class="mt-5 grid gap-3 text-slate-300 sm:grid-cols-2">
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Enterprise Networking</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Active Directory</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Infrastructure Support</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Linux Administration</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Windows Administration</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Network Monitoring</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Firewall Administration</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-6">
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p class="text-sm uppercase tracking-[0.24em] text-teal-300/80">Early Career</p>
+                    <h3 class="mt-2 text-2xl font-semibold text-white">MLSTE IT Integrator Pvt Ltd</h3>
+                    <p class="mt-1 text-sm text-slate-400">Service Engineer • May 2019 – Nov 2020</p>
+                  </div>
+                  <div class="rounded-3xl bg-slate-800/90 px-4 py-2 text-sm font-semibold text-slate-100">Infrastructure Support</div>
+                </div>
+                <ul class="mt-5 grid gap-3 text-slate-300 sm:grid-cols-2">
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Network Device Installation</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Troubleshooting</li>
+                  <li class="rounded-2xl bg-slate-950/90 p-4">Infrastructure Support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section id="skills" class="mx-auto max-w-7xl px-6 pb-20">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="section-title">Skills</p>
+            <h2 class="text-4xl font-semibold text-white">Technical capabilities</h2>
+          </div>
+          <p class="max-w-2xl text-slate-400">A solid skillset across cloud, containers, DevOps, infrastructure, networking, and monitoring technologies.</p>
+        </div>
+        <div class="mt-10 grid gap-6 lg:grid-cols-2">
+          <div class="space-y-6 rounded-[32px] border border-white/10 bg-slate-950/80 p-8 shadow-xl shadow-black/30">
+            <div class="flex items-center justify-between gap-4">
+              <h3 class="text-xl font-semibold text-white">Cloud</h3>
+              <span class="badge">AWS / Azure</span>
+            </div>
+            <div class="grid gap-4">
+              <div>
+                <div class="progress-label"><span>AWS</span><span>80%</span></div>
+                <div class="progress-bar"><div class="progress-fill" data-value="80"></div></div>
+              </div>
+              <div>
+                <div class="progress-label"><span>Azure</span><span>85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" data-value="85"></div></div>
+              </div>
+              <div>
+                <div class="progress-label"><span>EC2 / VPC / IAM / Route53 / ELB</span><span>Core</span></div>
+                <div class="rounded-3xl bg-slate-900/70 p-4 text-sm text-slate-300">AWS infrastructure, identity, networking and load balancing services.</div>
+              </div>
+              <div>
+                <div class="progress-label"><span>AKS / EKS</span><span class="text-slate-300">Container orchestration</span></div>
+                <div class="rounded-3xl bg-slate-900/70 p-4 text-sm text-slate-300">Managed Kubernetes in Azure and AWS environments.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-6 rounded-[32px] border border-white/10 bg-slate-950/80 p-8 shadow-xl shadow-black/30">
+            <div class="flex items-center justify-between gap-4">
+              <h3 class="text-xl font-semibold text-white">Containers & DevOps</h3>
+              <span class="badge">Automation</span>
+            </div>
+            <div class="grid gap-4">
+              <div>
+                <div class="progress-label"><span>Docker</span><span>80%</span></div>
+                <div class="progress-bar"><div class="progress-fill" data-value="80"></div></div>
+              </div>
+              <div>
+                <div class="progress-label"><span>Kubernetes</span><span>75%</span></div>
+                <div class="progress-bar"><div class="progress-fill" data-value="75"></div></div>
+              </div>
+              <div>
+                <div class="progress-label"><span>Azure DevOps</span><span>DevOps</span></div>
+                <div class="rounded-3xl bg-slate-900/70 p-4 text-sm text-slate-300">Pipeline automation with Azure DevOps and Git-based workflows.</div>
+              </div>
+              <div>
+                <div class="progress-label"><span>Jenkins / Ansible / ArgoCD / Git</span><span>Tools</span></div>
+                <div class="rounded-3xl bg-slate-900/70 p-4 text-sm text-slate-300">Continuous delivery, configuration automation and source control.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-6 rounded-[32px] border border-white/10 bg-slate-950/80 p-8 shadow-xl shadow-black/30">
+            <div class="flex items-center justify-between gap-4">
+              <h3 class="text-xl font-semibold text-white">Infrastructure</h3>
+              <span class="badge">Systems</span>
+            </div>
+            <div class="grid gap-4">
+              <div>
+                <div class="progress-label"><span>Windows Server</span><span>90%</span></div>
+                <div class="progress-bar"><div class="progress-fill" data-value="90"></div></div>
+              </div>
+              <div>
+                <div class="progress-label"><span>Linux</span><span>85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" data-value="85"></div></div>
+              </div>
+              <div>
+                <div class="rounded-3xl bg-slate-900/70 p-4 text-sm text-slate-300">Active Directory, VMware vSphere, DNS, DHCP and enterprise system administration.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-6 rounded-[32px] border border-white/10 bg-slate-950/80 p-8 shadow-xl shadow-black/30">
+            <div class="flex items-center justify-between gap-4">
+              <h3 class="text-xl font-semibold text-white">Networking & Monitoring</h3>
+              <span class="badge">Operations</span>
+            </div>
+            <div class="grid gap-4">
+              <div>
+                <div class="progress-label"><span>Networking</span><span>95%</span></div>
+                <div class="progress-bar"><div class="progress-fill" data-value="95"></div></div>
+              </div>
+              <div class="rounded-3xl bg-slate-900/70 p-4 text-sm text-slate-300">FortiGate, F5 BIG-IP, Juniper SSG, Cisco, VPN and load balancing operations.</div>
+              <div class="rounded-3xl bg-slate-900/70 p-4 text-sm text-slate-300">Prometheus, Grafana, CloudWatch, PRTG, Qualys and CrowdStrike monitoring and observability.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="mx-auto max-w-7xl px-6 pb-20">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="section-title">Projects</p>
+            <h2 class="text-4xl font-semibold text-white">Practical infrastructure work</h2>
+          </div>
+          <p class="max-w-2xl text-slate-400">Projects based on actual cloud deployment, CI/CD automation, and enterprise infrastructure operations.</p>
+        </div>
+        <div class="mt-10 grid gap-6 xl:grid-cols-3">
+          <article class="glass rounded-[32px] border border-white/10 p-8">
+            <p class="text-sm uppercase tracking-[0.24em] text-teal-300/80">Containerization</p>
+            <h3 class="mt-4 text-2xl font-semibold text-white">Containerized Application Deployment</h3>
+            <p class="mt-4 text-slate-300">Built and managed containerized workloads using Docker and Kubernetes on AWS EKS. Implemented load balancing and ingress for application delivery.</p>
+            <ul class="mt-6 space-y-3 text-slate-400 text-sm">
+              <li>Docker</li>
+              <li>Kubernetes</li>
+              <li>AWS EKS</li>
+              <li>Load Balancer</li>
+              <li>Ingress</li>
+            </ul>
+          </article>
+          <article class="glass rounded-[32px] border border-white/10 p-8">
+            <p class="text-sm uppercase tracking-[0.24em] text-teal-300/80">Automation</p>
+            <h3 class="mt-4 text-2xl font-semibold text-white">CI/CD Pipeline Automation</h3>
+            <p class="mt-4 text-slate-300">Automated deployments and release workflows using Azure DevOps and Jenkins, with Git-based source control and deployment automation.</p>
+            <ul class="mt-6 space-y-3 text-slate-400 text-sm">
+              <li>Azure DevOps</li>
+              <li>Jenkins</li>
+              <li>Git</li>
+              <li>Deployment Automation</li>
+            </ul>
+          </article>
+          <article class="glass rounded-[32px] border border-white/10 p-8">
+            <p class="text-sm uppercase tracking-[0.24em] text-teal-300/80">Enterprise Operations</p>
+            <h3 class="mt-4 text-2xl font-semibold text-white">Enterprise Infrastructure Operations</h3>
+            <p class="mt-4 text-slate-300">Supported enterprise networks, firewalls, load balancers, Windows Server, Linux systems, and VMware infrastructure for stable operations.</p>
+            <ul class="mt-6 space-y-3 text-slate-400 text-sm">
+              <li>FortiGate</li>
+              <li>F5 BIG-IP</li>
+              <li>Windows Server</li>
+              <li>Linux</li>
+              <li>VMware</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="mx-auto max-w-7xl px-6 pb-24">
+        <div class="rounded-[32px] border border-white/10 bg-slate-950/80 p-10 shadow-[0_40px_120px_rgba(0,0,0,0.4)]">
+          <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div class="space-y-6">
+              <p class="section-title">Contact</p>
+              <h2 class="text-4xl font-semibold text-white">Let’s connect for cloud and infrastructure opportunities.</h2>
+              <p class="text-slate-300 leading-8">Reach out for roles in network engineering, cloud operations, DevOps support, or infrastructure management. I’m available for opportunities that align with my hands-on experience and growth focus.</p>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div class="rounded-3xl border border-white/10 bg-slate-900/90 p-5">
+                  <p class="text-sm text-slate-400">Email</p>
+                  <a href="mailto:anandanbg1997@gmail.com" class="mt-3 block text-white font-semibold">anandanbg1997@gmail.com</a>
+                </div>
+                <div class="rounded-3xl border border-white/10 bg-slate-900/90 p-5">
+                  <p class="text-sm text-slate-400">Phone</p>
+                  <p class="mt-3 font-semibold text-white">+91 8086518294</p>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-[32px] border border-white/10 bg-slate-900/80 p-8">
+              <p class="text-sm uppercase tracking-[0.24em] text-teal-300/80">Get in touch</p>
+              <form action="mailto:anandanbg1997@gmail.com" method="post" class="mt-8 space-y-5">
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <input type="text" name="name" placeholder="Your name" class="w-full rounded-3xl border border-white/10 bg-[#08101d] px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-teal-400" />
+                  <input type="email" name="email" placeholder="Your email" class="w-full rounded-3xl border border-white/10 bg-[#08101d] px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-teal-400" />
+                </div>
+                <textarea name="message" rows="5" placeholder="Message" class="w-full rounded-3xl border border-white/10 bg-[#08101d] px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-teal-400"></textarea>
+                <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-teal-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-400">Send Message <span class="iconify" data-icon="lucide:send"></span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+  </div>
 
-    <!-- Footer -->
-    <footer id="contact" class="border-t border-white/10 bg-[#050505] pt-16 pb-12">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-2xl font-semibold text-white tracking-tight mb-6">Let's Build Something Resilient Together</h2>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <a href="mailto:anandanbg1997@gmail.com" class="min-w-[200px] py-3 rounded-lg bg-[#005073] text-white text-sm font-medium hover:bg-[#003d59] transition-all shadow-[0_0_20px_rgba(0,80,115,0.4)] hover:shadow-[0_0_30px_rgba(0,80,115,0.6)]">
-                    Initiate Contact
-                </a>
-                <a href="https://www.linkedin.com/in/ananda-krishnan-70aa13146" class="min-w-[200px] py-3 rounded-lg border border-white/10 text-slate-300 text-sm font-medium hover:text-white hover:bg-white/5 transition-colors" target="_blank">
-                    View LinkedIn Profile
-                </a>
-            </div>
-            
-            <div class="mt-12 pt-8 border-t border-white/10">
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
-                    <div>
-                            <p class="text-xs font-mono text-slate-500 uppercase mb-2">Phone</p>
-                            <a href="tel:+918086518294" class="text-white font-medium hover:text-[#10B981] transition-colors">+91 8086518294</a>
-                    </div>
-                    <div>
-                            <p class="text-xs font-mono text-slate-500 uppercase mb-2">Email</p>
-                            <a href="mailto:anandanbg1997@gmail.com" class="text-white font-medium hover:text-[#10B981] transition-colors">anandanbg1997@gmail.com</a>
-                    </div>
-                    <div>
-                            <p class="text-xs font-mono text-slate-500 uppercase mb-2">Location</p>
-                            <p class="text-white font-medium">Kochi, Kerala, India</p>
-                    </div>
+  <footer class="border-t border-white/10 bg-[#050708] px-6 py-8 text-slate-400">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <div>
+        <p class="text-sm uppercase tracking-[0.24em] text-slate-500">Ananda Krishnan</p>
+        <p class="mt-3 max-w-lg text-sm leading-7">Network & System Engineer with cloud and infrastructure focus, delivering practical operations and automation support across enterprise environments.</p>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 text-sm text-slate-300">
+        <a href="https://www.linkedin.com/in/ananda-krishnan-70aa13146" target="_blank" class="rounded-full border border-slate-700 px-4 py-2 transition hover:border-teal-400 hover:text-white">LinkedIn</a>
+        <a href="mailto:anandanbg1997@gmail.com" class="rounded-full border border-slate-700 px-4 py-2 transition hover:border-teal-400 hover:text-white">Email</a>
+      </div>
+    </div>
+    <div class="mx-auto mt-8 max-w-7xl border-t border-white/10 pt-6 text-center text-xs text-slate-500">© 2026 Ananda Krishnan. Designed for cloud and infrastructure engineering roles.</div>
+  </footer>
 
-                </div>
-            
-            <div class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/5 text-xs text-slate-600 font-mono">
-                <p>&copy; 2026 Ananda Krishnan</p>
-                <div class="flex gap-6 mt-4 md:mt-0">
-                    <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span> Abuza, Kerala</span>
-                    <span>Built with Tailwind CSS</span>
-                </div>
-            </div>
-        </div>
-    </footer>
+  <button id="scrollTop" class="scroll-indicator hidden" aria-label="Scroll to top">
+    <span class="iconify text-xl text-slate-100" data-icon="lucide:arrow-up"></span>
+  </button>
 
+  <script>
+    const scrollTopButton = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollTopButton.classList.remove('hidden');
+      } else {
+        scrollTopButton.classList.add('hidden');
+      }
+    });
+    scrollTopButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    const progressFills = document.querySelectorAll('.progress-fill');
+    const revealProgress = () => {
+      progressFills.forEach(fill => {
+        const value = fill.dataset.value;
+        const rect = fill.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 80) {
+          fill.style.transform = `scaleX(${value / 100})`;
+        }
+      });
+    };
+    window.addEventListener('scroll', revealProgress);
+    revealProgress();
+  </script>
 </body>
 </html>
